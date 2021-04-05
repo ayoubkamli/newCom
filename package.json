@@ -1,0 +1,22 @@
+{
+  "name": "compitor",
+  "version": "1.0.0",
+  "description": "this is new compitor project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index \"-X + 2.5 X ^ 5 - 20 X + 50X  = X - X -X ^ 2 + 5 * X ^ 2 - 2 * X + 2.5 * X - 2.8 * X - X^2 + X^2 +5 -8\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayoubkamli/newCom.git"
+  },
+  "keywords": [
+    "compitorV1"
+  ],
+  "author": "akamli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayoubkamli/newCom/issues"
+  },
+  "homepage": "https://github.com/ayoubkamli/newCom#readme"
+}
