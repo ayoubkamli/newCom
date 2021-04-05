@@ -5,7 +5,7 @@ const rewrit = (e) => {
   let eq = "";
   let i = 0;
   let degree = 0;
-  console.log(e);
+  // console.log(e);
 
   while (i < e.length && e) {
     if (i > 0) {
@@ -64,25 +64,3 @@ const rewrit = (e) => {
 };
 
 module.exports = rewrit;
-
-// j = i + 1;
-// if (e[i].exp == 0 && e[i].number > 0) {
-//   if (i > 0) {
-//     eq = eq.concat(" + ");
-//   }
-//   eq = eq.concat(`${e[i].number}`);
-// } else if (e[i].exp == 1 && e[i].number > 0) {
-//   if (i > 0) {
-//     eq = eq.concat(" + ");
-//   }
-//   eq = eq.concat(`${e[i].number} * X`);
-// } else if (e[i].number < 0 && j < e.length) {
-//   eq = eq.concat(" - ");
-//   eq = eq.concat(`${e[i].number * -1} * X^${e[i].exp}`);
-// } else {
-//   if (i > 0) {
-//     eq = eq.concat(" + ");
-//   }
-//   eq = eq.concat(`${e[i].number} * X^${e[i].exp}`);
-// }
-// i++;

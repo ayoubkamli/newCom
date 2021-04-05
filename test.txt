@@ -1,5 +1,5 @@
 node index "0 * X=-1-1" => done
 node index "=" => done
 node index "1-X= 1 - X^2" (wrong symlification) => done
-node index "-X= 1 - - X"
-node index "X= 1 * -X" 
+node index "-X= 1 - - X" Syntax error
+node index "X= 1 * -X" sytax error
