@@ -4,6 +4,9 @@ const checkSingleElement = (el, sign) => {
   n = { number: null, exp: null };
   result = [];
   // console.log(el);
+  if (el.match("\\d+\\*\\d+\\*\\d+")) {
+    console.log(el);
+  }
   if (el == "X") {
     n.number = 1 * sign;
     n.exp = 1;
@@ -67,6 +70,13 @@ const checkSingleElement = (el, sign) => {
       n.number = 0;
     }
     n.exp = 0;
+  } else if (el.match("[\\-]\\d+\\.\\d+\\*[\\-]\\d+\\.\\d+")) {
+    console.log(el);
+    n.number = parseFloat(el) * sign;
+    if (n.number == -0) {
+      n.number = 0;
+    }
+    n.exp = 0;
   } else {
     console.log(`Suyntax Error at: ${el}`);
     process.exit(1);
@@ -74,8 +84,9 @@ const checkSingleElement = (el, sign) => {
   return n;
 };
 
-const splitElement = (e, sign) => {
-  arr = e.replace(/ /g, "").replace(/-/g, "+-").split("+");
+const splitElement = async (e, sign) => {
+  let arr = e.replace(/-/g, "+-").split("+");
+  // console.log(arr);
   result = [];
   let element = {};
   arr.map(async (el) => {
@@ -84,7 +95,6 @@ const splitElement = (e, sign) => {
       result.push(element);
     }
   });
-
   return result;
 };
 

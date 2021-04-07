@@ -3,3 +3,7 @@ node index "=" => done
 node index "1-X= 1 - X^2" (wrong symlification) => done
 node index "-X= 1 - - X" Syntax error
 node index "X= 1 * -X" sytax error
+node index "1 * -2= X"
+node index < /dev/null
+node index "0=0"
+node index "x++++=-1++++"
