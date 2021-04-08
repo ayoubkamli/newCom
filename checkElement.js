@@ -3,10 +3,7 @@ const simplifyEquation = require("./simplifyEquation");
 const checkSingleElement = (el, sign) => {
   n = { number: null, exp: null };
   result = [];
-  // console.log(el);
-  if (el.match("\\d+\\*\\d+\\*\\d+")) {
-    console.log(el);
-  }
+
   if (el == "X") {
     n.number = 1 * sign;
     n.exp = 1;
@@ -78,7 +75,7 @@ const checkSingleElement = (el, sign) => {
     }
     n.exp = 0;
   } else {
-    console.log(`Suyntax Error at: ${el}`);
+    console.log(`Unvalide form: ${el}`);
     process.exit(1);
   }
   return n;
@@ -86,7 +83,6 @@ const checkSingleElement = (el, sign) => {
 
 const splitElement = async (e, sign) => {
   let arr = e.replace(/-/g, "+-").split("+");
-  // console.log(arr);
   result = [];
   let element = {};
   arr.map(async (el) => {
